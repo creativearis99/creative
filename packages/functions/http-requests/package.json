@@ -1,0 +1,57 @@
+{
+  "name": "http-requests",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "yurikrupnik <krupnik.yuri@gmail.com>",
+  "homepage": "https://github.com/creativearis99/creative/tree/master/packages/http-requests#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "10"
+  },
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "watch": {
+    "fucntion": "dist/*.js"
+  },
+  "config": {
+    "port": "3333",
+    "trigger": "http",
+    "entry": "httpRequest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativearis99/creative.git"
+  },
+  "scripts": {
+    "build:watch": "rollup --config=../../../rollup.config.functions.js -w",
+    "watch": "npm-watch fucntion",
+    "fucntion": "functions-framework --target=$npm_package_config_entry --port=$npm_package_config_port",
+    "start": "run-p build:watch watch",
+    "prebuild": "rimraf dist",
+    "lint": "eslint src --ext .js,.jsx --color",
+    "test": "jest src --colors",
+    "build": "rollup --config=../../../rollup.config.functions.js",
+    "predeploy": "npm run build",
+    "deploy": "bash ../../../scripts/deploy-to-cloud-functions.sh"
+  },
+  "bugs": {
+    "url": "https://github.com/creativearis99/creative/issues"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.4.0",
+    "npm-watch": "^0.6.0",
+    "supertest": "^4.0.2"
+  }
+}
