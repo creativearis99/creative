@@ -2,7 +2,6 @@ import express from 'express';
 
 
 const router = express.Router();
-// const users = Router();
 
 // const UsersSchema = new mongoose.Schema({
 //     nick: {
