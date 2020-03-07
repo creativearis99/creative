@@ -8,7 +8,7 @@ const MainNav = ({ routes }) => (
         <button type="button" onClick={api.logout}>
             logout
         </button>
-        {routes.map(route => (
+        {routes.map((route) => (
             <div key={route.key}>
                 <Link to={route.path}>
                     {route.key}

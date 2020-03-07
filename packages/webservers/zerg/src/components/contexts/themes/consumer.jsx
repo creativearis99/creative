@@ -10,8 +10,8 @@ function ThemesConsumer({ render }) {
                 if (typeof render === 'function') {
                     return render(props);
                 }
-                return (
-                    <DefaultConsumer {...props} />
+                return ( // eslint-disable-next-line
+                    <DefaultConsumer theme={props.theme} toggleTheme={props.toggleTheme} />
                 );
             }}
         </Consumer>

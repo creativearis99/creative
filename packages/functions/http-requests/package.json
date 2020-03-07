@@ -19,7 +19,7 @@
   "config": {
     "port": "3333",
     "trigger": "http",
-    "entry": "httpRequest"
+    "entry": "httpRequests"
   },
   "repository": {
     "type": "git",

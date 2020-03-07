@@ -12,21 +12,11 @@
 // console.log('process.env', process.env);
 // const morgan = require('morgan');
 // const { Translate } = require('@google-cloud/translate').v2;
-// function handleDatabaseUrl() {
-//     const url = process.env.DATABASE_URL;
-//     if (!url) {
-//         return 'mongodb://localhost/client-apps';
-//     }
-//     return url.includes('mlab.com')
-//         ? `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${url}`
-//         : url;
-// }
 
 // import axios from 'axios';
 // import { MongoClient } from 'mongodb';
 // import mongoose from 'mongoose';
 import express from 'express';
-
 
 import users from './users';
 import projects from './projects';
@@ -79,7 +69,4 @@ const app = express();
 api.use(users);
 api.use(projects);
 
-export {
-    api,
-    app
-};
+export { api, app };

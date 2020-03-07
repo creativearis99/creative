@@ -2,11 +2,7 @@ import express from 'express';
 import { url } from './config';
 import Model from './model';
 import {
-    list,
-    find,
-    removeOne,
-    create,
-    update
+    list, find, removeOne, create, update
 } from '../methods';
 
 const route = express.Router();

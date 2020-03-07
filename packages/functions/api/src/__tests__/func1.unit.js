@@ -9,7 +9,6 @@ const app = express();
 //     return this;
 // }
 
-
 it('func1 test', () => {
     // Mock ExpressJS 'req' and 'res' parameters
     // const name = uuid.v4();

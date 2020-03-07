@@ -22,7 +22,7 @@
 //         : url;
 // }
 
-// import axios from 'axios';
+import axios from 'axios';
 // import { MongoClient } from 'mongodb';
 // import mongoose from 'mongoose';
 import express, { Router } from 'express';
@@ -201,27 +201,27 @@ const func1 = (req, res) => {
 //         error: err
 //     }));
 
-// function httpRequest(req, res) {
-//     if (req.url.includes('favicon')) {
-//         return;
-//     }
-//     return axios
-//         .get('https://api.github.com/users')
-//         .then((response) => {
-//             console.log('re'); // eslint-disable-line
-//             return res.status(200).json({
-//                 message: response.data
-//             });
-//         })
-//         .catch((err) => {
-//             console.log('eerr'); // // eslint-disable-line
-//             return res.status(500).json({
-//                 error: err
-//             });
-//         });
-// }
+function httpRequests(req, res) {
+    if (req.url.includes('favicon')) {
+        return false;
+    }
+    return axios
+        .get('https://api.github.com/users')
+        .then((response) => {
+            console.log('re'); // eslint-disable-line
+            return res.status(200).json({
+                message: response.data
+            });
+        })
+        .catch((err) => {
+            console.log('eerr'); // // eslint-disable-line
+            return res.status(500).json({
+                error: err
+            });
+        });
+}
 
 // exports.func1 = func1;
 export {
-    func1, api, func1Rotue
+    httpRequests, func1, api, func1Rotue
 };

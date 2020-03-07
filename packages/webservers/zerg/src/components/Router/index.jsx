@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
+/*  eslint-disable */
 
-const Router = ({ children, routes }) => (
-    <div>
-        {children}
-        {routes.map(route => <Route key={route.key} {...route} />)}
-    </div>
+const Router = ({ routes }) => (
+    <>
+        {routes.map((route) => <Route key={route.key} {...route} />)}
+    </>
 );
 
 Router.propTypes = {

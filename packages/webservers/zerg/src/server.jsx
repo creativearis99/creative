@@ -2,7 +2,7 @@ import path from 'path';
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import proxy from 'express-http-proxy';
+// import proxy from 'express-http-proxy';
 import { port, databaseUrl } from './config';
 import render from './services/render';
 import api from './api';

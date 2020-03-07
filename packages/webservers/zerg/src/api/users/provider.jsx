@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from './context';
 import api from './api';
 
-const toggleLoading = prevState => ({ loading: !prevState.loading });
+const toggleLoading = (prevState) => ({ loading: !prevState.loading });
 
 class UsersProvider extends Component {
     constructor(props, context) {
@@ -25,13 +25,13 @@ class UsersProvider extends Component {
     toggleCallback(params, cb) {
         return () => api.fetch(params)
             .then((data) => {
-                this.setState(prevState => ({
+                this.setState((prevState) => ({
                     data,
                     loading: !prevState.loading
                 }), cb);
             })
             .catch((error) => {
-                this.setState(prevState => ({
+                this.setState((prevState) => ({
                     error,
                     loading: !prevState.loading
                 }));

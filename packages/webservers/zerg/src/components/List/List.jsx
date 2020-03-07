@@ -7,21 +7,22 @@ const List = (props) => {
     return (
         <div>
             {/* eslint-disable-next-line no-underscore-dangle */}
-            {loading ? <Spinner /> : Array.isArray(data) && data.map(v => (
-                /* eslint-disable-next-line no-underscore-dangle */
-                <div key={v._id}>
-                    <div>
-                        <span>
-                            name:
-                        </span>
-                        {v.name}
+            {loading ? (
+                <Spinner />
+            ) : (
+                Array.isArray(data) && data.map((v) => (
+                    /* eslint-disable-next-line no-underscore-dangle */
+                    <div key={v._id}>
+                        <div>
+                            <span>name:</span>
+                            {v.name}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))
+            )}
         </div>
     );
 };
-
 
 List.propTypes = {
     loading: PropTypes.bool.isRequired,

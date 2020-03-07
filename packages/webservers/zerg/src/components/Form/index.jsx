@@ -13,17 +13,11 @@ class FormWithArrays extends Component {
                 <div className="row">
                     <div className="col-xs-7">
                         <div className={styles.root}>
-                            <div className="root">
-                                 stam
-                            </div>
-                            <div>
-                                form here
-                            </div>
+                            <div className="root">stam</div>
+                            <div>form here</div>
                         </div>
                     </div>
-                    <div className="col-xs-5">
-                        right side
-                    </div>
+                    <div className="col-xs-5">right side</div>
                 </div>
             </div>
         );

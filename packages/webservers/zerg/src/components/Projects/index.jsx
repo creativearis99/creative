@@ -10,12 +10,12 @@ class Container extends Component {
 
     render() {
         return (
-            <ProjectsConsumer render={props => (
+            <ProjectsConsumer render={(props) => (
                 <div>
                     <h3>
                         projects
                     </h3>
-                    <List {...props} />
+                    <List loading={props.loading} data={props.data} />
                 </div>
             )}
             />
