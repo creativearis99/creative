@@ -10,6 +10,7 @@
   "plugins": [
     "@babel/plugin-syntax-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import",
-    "react-loadable/babel"
+    "react-loadable/babel",
+    "@loadable/babel-plugin"
   ]
 }

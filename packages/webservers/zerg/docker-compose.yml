@@ -6,9 +6,9 @@ services:
     ports:
     - 27017:27017
   web:
-    build: ""
+    build: "."
     ports:
-    - 7000:7000
+    - 8080:8080
     command: npm start
     depends_on:
     - db
