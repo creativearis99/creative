@@ -35,6 +35,7 @@ route.all('/api/*', proxy(`${destHost}:${destPort}`));
 
 webServer.use(route);
 webServer.use(render(App, routes, assets));
+webServer.use((req, res, next) => next);
 
 server(webServer, destHost, destPort).listen(process.env.PORT, (err) => {
     if (err) {
