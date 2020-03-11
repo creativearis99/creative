@@ -1,35 +1,18 @@
-import Loadable from './Loadable';
+import loadable from '@loadable/component';
+// import React from 'react';
+// import Header from './Header';
+// import Root from './Root';
+// import Dashboard from './Dashboard';
+// import Header from './Header/DefaultHeader';
+const Topics = loadable(() => import(/* webpackChunkName: "topics" */ './Topics'));
+const About = loadable(() => import(/* webpackChunkName: "About" */ './About'));
+const Dashboard = loadable(() => import(/* webpackChunkName: "Dashboard" */ './Dashboard'));
+const Projects = loadable(() => import(/* webpackChunkName: "Projects" */ './Projects'));
+const Users = loadable(() => import(/* webpackChunkName: "Users" */ './Users'));
+const Register = loadable(() => import(/* webpackChunkName: "Register" */ './Register'));
+const ChatRoom = loadable(() => import(/* webpackChunkName: "ChatRoom" */ './ChatRoom'));
+const Login = loadable(() => import(/* webpackChunkName: "login" */ '../api/auth/container'));
 
-const Topics = Loadable({
-    loader: () => import(/* webpackChunkName: "topics" */ './Topics'),
-});
-
-const About = Loadable({
-    loader: () => import(/* webpackChunkName: "about" */ './About'),
-});
-
-const Login = Loadable({
-    loader: () => import(/* webpackChunkName: "login" */ '../api/auth/container'),
-});
-const Dashboard = Loadable({
-    loader: () => import(/* webpackChunkName: "dashboard" */ './Dashboard'),
-});
-
-const Projects = Loadable({
-    loader: () => import(/* webpackChunkName: "projects" */ './Projects'),
-});
-
-const Users = Loadable({
-    loader: () => import(/* webpackChunkName: "users" */ './Users'),
-});
-
-const Register = Loadable({
-    loader: () => import(/* webpackChunkName: "register" */ './Register'),
-});
-
-const ChatRoom = Loadable({
-    loader: () => import(/* webpackChunkName: "chat" */ './ChatRoom'),
-});
 const routes = [
     {
         path: '/',
